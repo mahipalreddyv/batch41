@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "copydata_staging_container_sink_container",
 	"properties": {
 		"activities": [
 			{

@@ -1,0 +1,54 @@
+{
+	"name": "stage_fileter_sink",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText2",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "filter1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          SETTLEMENT_MONTH as string,",
+				"          SERVICE as string,",
+				"          PARTNER_CODE as string,",
+				"          PROD_TYPE as string,",
+				"          CHARGE_DESC as string,",
+				"          TRANSACTION as string,",
+				"          AMOUNT as string,",
+				"          PARTNER_SHARE as string,",
+				"          ACCESS_COUNT as string,",
+				"          Prop_9 as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     limit: 10,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 filter(AMOUNT !='0') ~> filter1",
+				"filter1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}

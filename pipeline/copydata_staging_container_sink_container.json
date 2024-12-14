@@ -63,7 +63,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "SETTLEMENT_MONTH1",
+									"name": "SETTLEMENT_MONTH",
 									"physicalType": "String"
 								}
 							},
@@ -74,7 +74,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "SERVICE1",
+									"name": "SERVICE",
 									"physicalType": "String"
 								}
 							},
@@ -85,7 +85,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "PARTNER_CODE1",
+									"name": "PARTNER_CODE",
 									"physicalType": "String"
 								}
 							},
@@ -96,7 +96,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "PROD_TYPE1",
+									"name": "PROD_TYPE",
 									"physicalType": "String"
 								}
 							},
@@ -107,7 +107,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "CHARGE_DESC1",
+									"name": "CHARGE_DESC",
 									"physicalType": "String"
 								}
 							},
@@ -154,7 +154,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "ACCESS_COUNT1",
+									"name": "ACCESS_COUNT",
 									"physicalType": "String"
 								}
 							},

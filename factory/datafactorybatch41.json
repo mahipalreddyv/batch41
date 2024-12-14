@@ -1,0 +1,9 @@
+{
+	"name": "datafactorybatch41",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c7fdba31-9bc5-4b01-a60b-f933f142bddb",
+		"tenantId": "da01178a-c9ee-464d-8a58-27831aa90f14"
+	}
+}

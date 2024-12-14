@@ -1,0 +1,64 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "cpbss_stat.csv",
+				"container": "stagingdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SETTLEMENT_MONTH",
+				"type": "String"
+			},
+			{
+				"name": "SERVICE",
+				"type": "String"
+			},
+			{
+				"name": "PARTNER_CODE",
+				"type": "String"
+			},
+			{
+				"name": "PROD_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "CHARGE_DESC",
+				"type": "String"
+			},
+			{
+				"name": "TRANSACTION",
+				"type": "String"
+			},
+			{
+				"name": "AMOUNT",
+				"type": "String"
+			},
+			{
+				"name": "PARTNER_SHARE",
+				"type": "String"
+			},
+			{
+				"name": "ACCESS_COUNT",
+				"type": "String"
+			},
+			{
+				"name": "Prop_9",
+				"type": "String"
+			}
+		]
+	}
+}

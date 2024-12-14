@@ -208,14 +208,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Started",
-				"pipeline": {
-					"pipelineReference": {
-						"referenceName": "copydata_staging_container_sink_container",
-						"type": "PipelineReference"
-					},
-					"parameters": {}
-				},
+				"runtimeState": "Stopped",
 				"type": "TumblingWindowTrigger",
 				"typeProperties": {
 					"frequency": "Hour",
@@ -227,6 +220,34 @@
 						"intervalInSeconds": 30
 					},
 					"dependsOn": []
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "copydata_staging_container_sink_container",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 1,
+						"startTime": "2024-12-14T05:14:00",
+						"timeZone": "India Standard Time"
+					}
 				}
 			},
 			"dependsOn": [
